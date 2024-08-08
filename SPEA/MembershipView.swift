@@ -33,7 +33,7 @@ struct MembershipView: View {
                             KFImage(URL(string: member.logo))
                                 .resizable()
                                 .placeholder {
-                                    Image(systemName: "photo")
+                                    Image(systemName: "SPEA")
                                         .resizable()
                                         .scaledToFit()
                                         .frame(maxWidth: .infinity)
@@ -62,7 +62,7 @@ struct MembershipView: View {
                     }
                 }
             }
-            .navigationTitle("Membership")
+            .navigationTitle("Your Membership")
             .sheet(item: $memberSelected) { member in
                 VStack(alignment: .leading) {
                     Spacer()

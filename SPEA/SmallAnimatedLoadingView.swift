@@ -12,7 +12,7 @@ struct SmallAnimatedLoadingView: View {
 
     var body: some View {
         VStack {
-            Image("SPEA") // Use the actual name of your image
+            Image("SPEA")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)

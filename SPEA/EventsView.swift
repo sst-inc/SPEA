@@ -172,16 +172,19 @@ struct EventDetailView: View {
                     HStack {
                         Text("Date:")
                             .fontWeight(.bold)
+                            .font(.system(size: 20))
                         Text("\(event.dates)")
                     }
                     HStack {
                         Text("Time:")
                             .fontWeight(.bold)
+                            .font(.system(size: 20))
                         Text("\(event.time)")
                     }
                     HStack {
                         Text("Venue:")
                             .fontWeight(.bold)
+                            .font(.system(size: 20))
                         Text("\(event.venue)")
                     }
                 }
@@ -196,6 +199,7 @@ struct EventDetailView: View {
                             }
                             .cacheOriginalImage()
                             .setProcessor(DownsamplingImageProcessor(size: CGSize(width: 600, height: 400)))
+                            .roundCorner(radius: .widthFraction(0.05))
                             .onSuccess { result in
                                 print("Successfully loaded image: \(result)")
                             }
@@ -205,7 +209,6 @@ struct EventDetailView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: .infinity, maxHeight: 400)
                     }
-                    .cornerRadius(10) // Apply rounded corners to the outer container
                     .padding()
                 } else {
                     Text("Invalid URL")
@@ -232,7 +235,7 @@ struct EventDetailView: View {
 }
 
 #Preview {
-    EventDetailView(event: Event(Ftitle: "Sample Event", icon: "star.fill", dates: "12 July 2024", time: "4pm - 5pm", venue: "Zoom (Online)", image: "https://example.com/image.png"))
+    EventDetailView(event: Event(Ftitle: "Sample Event", icon: "star.fill", dates: "12 July 2024", time: "4pm - 5pm", venue: "Zoom (Online)", image: "https://i.postimg.cc/x8nZ3BpK/image.png"))
         .previewLayout(.sizeThatFits)
         .environment(\.sizeCategory, .large)
 }

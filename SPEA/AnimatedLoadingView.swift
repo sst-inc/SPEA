@@ -5,7 +5,7 @@ struct AnimatedLoadingView: View {
 
     var body: some View {
         VStack {
-            Image("SPEA") // Use the actual name of your image
+            Image("SPEA")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 250, height: 250)

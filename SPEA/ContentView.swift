@@ -15,7 +15,7 @@ struct ContentView: View {
             TabView {
                 FeedView()
                     .tabItem {
-                        Label("Newsletter", systemImage: "newspaper.fill")
+                        Label("Newsletters", systemImage: "newspaper.fill")
                     }
                 EventsView()
                     .tabItem {
